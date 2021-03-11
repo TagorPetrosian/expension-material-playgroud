@@ -1,0 +1,13 @@
+:host {
+    border: 1px solid black;
+}
+
+mat-expansion-panel,
+ma-expansion-panel-header,
+mat-panel-description {
+    border: 1px solid black;
+}
+
+.disable-ripple {
+    background: none !important;
+}
