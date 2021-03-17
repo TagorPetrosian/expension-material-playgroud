@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-
+/* @import '~@angular/material/prebuilt-themes/indigo-pink.css'; */
 html,
 body {
     height: 100%;
@@ -10,9 +10,13 @@ body {
     background-color: #6b00bc;
 }
 
-/* mat-expansion-panel.mat-expansion-panel-spacing {
-  margin: 0;
-} */
-/* mat-expansion-panel {
-    margin: 0 !important;
-} */
+mat-expansion-panel mat-panel-description ul li,
+a:visited,
+a:focus {
+    color: #6b00bc;
+}
+
+mat-expansion-panel mat-panel-description ul,
+ol {
+    padding-left: 16px;
+}

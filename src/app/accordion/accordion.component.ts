@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewContainerRef, ViewEncapsulation } from '@angular/core';
 interface AccordionItem {
     title: string;
     content: string;
@@ -7,26 +7,87 @@ interface AccordionItem {
     selector: 'app-accordion',
     templateUrl: './accordion.component.html',
     styleUrls: ['./accordion.component.css'],
+    encapsulation: ViewEncapsulation.None,
 })
 export class AccordionComponent implements OnInit {
     public items: AccordionItem[] = [
         {
-            title: 'title1',
-            content:
-                'Aute sunt duis magna incididunt consequat magna nisi non eu proident reprehenderit nostrud voluptate. Nulla ad veniam laboris ea esse aliquip consequat irure amet sit. In reprehenderit enim ad deserunt veniam duis culpa ex Lorem exercitation mollit veniam aute labore. Culpa dolor ea ea ea ipsum do do in officia nulla nostrud. Aute magna enim commodo nostrud. Amet eiusmod ex Lorem incididunt. Eu et sit aute tempor do occaecat.',
+            title: 'Get Truffles, Get Rich',
+            content: `<html lang="en">
+            <body>
+              <p>
+                On TruffleLive, you can make real money by earning Truffles – our in-app currency. The Truffles you earn can be
+                redeemed for cash. There are three approaches Talents use to earn their Truffles:
+              </p>
+              <ol>
+                <li>Charge your followers and clients for your services and content</li>
+                <li>Your fans and potential clients voluntary give you tips and virtual gifts</li>
+                <li>
+                  By referring people to TruffleLive and sharing live content, you automatically enter the Truffle cash program.
+                </li>
+              </ol>
+              <p>You can earn Truffles on TruffleLive use any of these 4 features. Tap each one to learn how it’s done:</p>
+              <ul>
+                <li><a href="#">Live Streams</a></li>
+                <li><a href="#">Upload pre-made videos</a></li>
+                <li><a href="#">Chat, groups, and channels</a></li>
+                <li><a href="#">Truffle Cash Referral Program</a></li>
+              </ul>
+            </body>
+          </html>`,
         },
         {
             title: 'title2',
-            content:
-                'Commodo veniam sint laboris magna ut. Reprehenderit ad voluptate occaecat velit. Nisi Lorem Lorem irure cupidatat ullamco. Nostrud voluptate aliquip labore anim do. Velit aliqua in officia nostrud laborum. Aliqua minim pariatur cillum Lorem mollit consectetur mollit deserunt nostrud exercitation velit do quis labore. Commodo ea anim irure dolore sint nulla.',
+            content: `<html lang="en">
+            <body>
+              <p>
+                On TruffleLive, you can make real money by earning Truffles – our in-app currency. The Truffles you earn can be
+                redeemed for cash. There are three approaches Talents use to earn their Truffles:
+              </p>
+              <ol>
+                <li>Charge your followers and clients for your services and content</li>
+                <li>Your fans and potential clients voluntary give you tips and virtual gifts</li>
+                <li>
+                  By referring people to TruffleLive and sharing live content, you automatically enter the Truffle cash program.
+                </li>
+              </ol>
+              <p>You can earn Truffles on TruffleLive use any of these 4 features. Tap each one to learn how it’s done:</p>
+              <ul>
+                <li><a href="#">Live Streams</a></li>
+                <li><a href="#">Upload pre-made videos</a></li>
+                <li><a href="#">Chat, groups, and channels</a></li>
+                <li><a href="#">Truffle Cash Referral Program</a></li>
+              </ul>
+            </body>
+          </html>`,
         },
         {
-            title: 'title2',
-            content:
-                'Adipisicing in in dolor tempor Lorem et culpa ut cupidatat voluptate ut nisi. Irure cupidatat aute aliqua magna qui aliqua dolor sint ad eiusmod sunt. Magna proident fugiat irure consequat laboris exercitation. Excepteur aliquip dolore cillum occaecat magna est Lorem cupidatat esse. Consequat tempor excepteur pariatur voluptate proident incididunt deserunt non.',
+            title: 'title3',
+            content: `<html lang="en">
+            <body>
+              <p>
+                On TruffleLive, you can make real money by earning Truffles – our in-app currency. The Truffles you earn can be
+                redeemed for cash. There are three approaches Talents use to earn their Truffles:
+              </p>
+              <ol>
+                <li>Charge your followers and clients for your services and content</li>
+                <li>Your fans and potential clients voluntary give you tips and virtual gifts</li>
+                <li>
+                  By referring people to TruffleLive and sharing live content, you automatically enter the Truffle cash program.
+                </li>
+              </ol>
+              <p>You can earn Truffles on TruffleLive use any of these 4 features. Tap each one to learn how it’s done:</p>
+              <ul>
+                <li><a href="#">Live Streams</a></li>
+                <li><a href="#">Upload pre-made videos</a></li>
+                <li><a href="#">Chat, groups, and channels</a></li>
+                <li><a href="#">Truffle Cash Referral Program</a></li>
+              </ul>
+            </body>
+          </html>`,
         },
     ];
-    constructor() {}
+    constructor(private viewContainer: ViewContainerRef) {}
 
     ngOnInit(): void {}
 }

@@ -1,5 +1,4 @@
 mat-expansion-panel {
-    /* border: 1px solid black; */
     border-radius: 25px !important;
     box-shadow: none !important;
     margin: 10px 0 !important;
@@ -7,4 +6,38 @@ mat-expansion-panel {
 
 mat-expansion-panel.mat-expansion-panel-spacing {
     margin: 0;
+}
+
+mat-expansion-panel-header .mat-content {
+    justify-content: space-between;
+    align-items: center;
+}
+mat-expansion-panel:first-child:not(.mat-expanded) mat-expansion-panel-header {
+    background-color: #ffc7b4;
+}
+mat-expansion-panel-header .mat-content > h1 {
+    margin-bottom: 0;
+}
+
+mat-icon {
+    font-size: 32px !important;
+}
+
+.mat-icon {
+    height: 32px !important;
+    width: 32px !important;
+}
+
+mat-icon.mat-icon.expanded {
+    color: #6b00bc !important;
+    border-radius: 50% !important;
+    background-color: #e9d9f5;
+}
+
+mat-expansion-panel:first-child mat-icon.mat-icon {
+    /* background-color: #ffc7b4; */
+}
+
+mat-expansion-panel mat-panel-description {
+    flex-direction: column;
 }

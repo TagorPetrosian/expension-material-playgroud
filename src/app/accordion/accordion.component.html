@@ -1,11 +1,10 @@
-<!-- <app-accordion-item *ngFor="let item of items"></app-accordion-item> -->
-<mat-accordion>
-    <mat-expansion-panel *ngFor="let item of items">
+<mat-accordion class="accordion" *transloco="let t">
+    <mat-expansion-panel *ngFor="let index of [1, 2, 3, 4, 5, 6, 7, 8]" hideToggle="true" #example>
         <mat-expansion-panel-header>
-            <h1>{{ item.title }}</h1>
+            <h1>{{ t('title' + index) }}</h1>
+            <mat-icon *ngIf="!example.expanded">keyboard_arrow_down</mat-icon>
+            <mat-icon *ngIf="example.expanded" class="expanded">keyboard_arrow_up</mat-icon>
         </mat-expansion-panel-header>
-        <mat-panel-description>
-            {{ item.content }}
-        </mat-panel-description>
+        <mat-panel-description [innerHtml]="t('content' + index)"> </mat-panel-description>
     </mat-expansion-panel>
 </mat-accordion>
